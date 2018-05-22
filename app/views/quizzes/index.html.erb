@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Quizzes</h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Question</th>
+      <th scope="col">#</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quizzes.each do |quiz| %>
+      <tr>
+        <td scope="row"><%= quiz.question %></td>
+        <td><%= link_to 'Answer', quiz %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= paginate @quizzes %>

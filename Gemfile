@@ -64,3 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
 gem 'activeadmin'
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.1.1'
+gem 'numbers_in_words'

@@ -1,0 +1,15 @@
+<%= form_with(model: @quiz, url: answer_quiz_path(@quiz), local: true) do |form| %>
+  <h4>Quiz #<%= @quiz.id %></h4>
+  <div class="form-group">
+    <label for="question" class="control-label">Question :</label>
+    <p id="question"><%= @quiz.question %></p>
+  </div>
+  <div class="form-group">
+    <label for="answer" class="control-label">Answer :</label>
+    <%= text_field_tag :answer, params[:answer], class: 'form-control' %>
+  </div>
+  <div class="actions">
+    <%= form.submit 'Check Answer', class: 'btn btn-primary', data: { disable_with: false } %>
+    <%= link_to 'Back', quizzes_path %>
+  </div>
+<% end %>
